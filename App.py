@@ -54,3 +54,27 @@ if missing:
 # LIMIT DATA (avoid crash)
 # -----------------------------
 df = df.head(5000)
+
+# -----------------------------
+# BASIC GRID (SMALL + SAFE)
+# -----------------------------
+st.subheader(" Multi-Chart Dashboard")
+
+fig1, axes1 = plt.subplots(2, 2, figsize=(12, 8))
+
+axes1[0, 0].hist(df["Final_Price"], bins=20)
+axes1[0, 0].set_title("Final Price Histogram")
+
+sns.countplot(x="Converted", data=df, ax=axes1[0, 1])
+axes1[0, 1].set_title("Conversion for Each program")
+
+sns.boxplot(x="Program_Type", y="Final_Price", data=df, ax=axes1[1, 0])
+axes1[1, 0].set_title("Price by Program")
+
+axes1[1, 1].plot(df["Revenue"])
+axes1[1, 1].set_title("Revenue Trend")
+
+plt.tight_layout()
+st.pyplot(fig1)
+
+st.write("Insights: ")
