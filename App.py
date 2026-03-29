@@ -38,3 +38,19 @@ if st.checkbox("Show Full Data"):
     st.write(df)
 else:
     st.dataframe(df.head(20))
+
+# -----------------------------
+# SAFE COLUMN CHECK
+# -----------------------------
+required_cols = ["Final_Price", "Converted", "Program_Type", "Revenue", "Discount_%"]
+
+missing = [col for col in required_cols if col not in df.columns]
+
+if missing:
+    st.error(f"❌ Missing columns: {missing}")
+    st.stop()
+
+# -----------------------------
+# LIMIT DATA (avoid crash)
+# -----------------------------
+df = df.head(5000)
