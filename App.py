@@ -30,3 +30,11 @@ else:
         st.stop()
 
 st.success("✅ Data Loaded Successfully")
+# -----------------------------
+# Raw Data Toggle
+# -----------------------------
+st.subheader("Dataset Preview")
+if st.checkbox("Show Full Data"):
+    st.write(df)
+else:
+    st.dataframe(df.head(20))
