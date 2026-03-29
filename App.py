@@ -77,4 +77,5 @@ axes1[1, 1].set_title("Revenue Trend")
 plt.tight_layout()
 st.pyplot(fig1)
 
-st.write("Insights: 1. More Students keen on lower Price Program 2. More Conversion after interaction with Program coordinators")
+st.write("Insights: 1. More Students keen on lower Price Program")
+st.write("2. More Conversion after interaction with Program coordinators")
