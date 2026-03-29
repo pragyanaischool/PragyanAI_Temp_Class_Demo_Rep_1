@@ -8,7 +8,7 @@ import os
 st.set_page_config(layout="wide")
 
 st.title(" PragyanAI Student Data Advanced Visualization App")
-
+st.image("PragyanAI_Transperent.png")
 # -----------------------------
 # SAFE DATA LOADING
 # -----------------------------
