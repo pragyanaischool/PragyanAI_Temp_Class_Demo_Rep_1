@@ -66,7 +66,7 @@ axes1[0, 0].hist(df["Final_Price"], bins=20)
 axes1[0, 0].set_title("Final Price Histogram")
 
 sns.countplot(x="Converted", data=df, ax=axes1[0, 1])
-axes1[0, 1].set_title("Conversion for Each program")
+axes1[0, 1].set_title("Conversion of program")
 
 sns.boxplot(x="Program_Type", y="Final_Price", data=df, ax=axes1[1, 0])
 axes1[1, 0].set_title("Price by Program")
@@ -77,4 +77,4 @@ axes1[1, 1].set_title("Revenue Trend")
 plt.tight_layout()
 st.pyplot(fig1)
 
-st.write("Insights: ")
+st.write("Insights: 1. More Students keen on lower Price Program 2. More Conversion after interaction with Program coordinators")
